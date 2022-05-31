@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Daniel\Desktop\aula04-04-noite\ProjetoGrafosNoite\.metadata\.plugins\org.eclipse.jdt.core
+340953389.index
+2357892688.index
+1865797976.index
