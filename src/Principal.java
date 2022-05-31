@@ -10,30 +10,36 @@ public class Principal {
 		Vertice v4 = new Vertice("v4");*/
 		
 
-		Grafo grafo = new Grafo(5);
+		Grafo grafo = new Grafo(6);
 			
 		try {
-			grafo.adicionarVertice("v0");
 			grafo.adicionarVertice("v1");
 			grafo.adicionarVertice("v2");
 			grafo.adicionarVertice("v3");
 			grafo.adicionarVertice("v4");
+			grafo.adicionarVertice("v5");
+			grafo.adicionarVertice("v6");
 			
-			grafo.conectarVertices("v0", "v3");
-			grafo.conectarVertices("v0", "v4");
-			grafo.conectarVertices("v1", "v3");
-			grafo.conectarVertices("v1", "v4");
+			grafo.conectarVertices("v1", "v2");
+			grafo.conectarVertices("v1", "v5");
 			grafo.conectarVertices("v2", "v3");
-			grafo.conectarVertices("v2", "v3");
-			grafo.conectarVertices("v2", "v2");
+			grafo.conectarVertices("v2", "v5");
 			grafo.conectarVertices("v3", "v4");
+			grafo.conectarVertices("v4", "v5");
+			grafo.conectarVertices("v4", "v6");
 			
-			System.out.println(grafo.getVertice("v4").getGrau());
+			/*
+			 * System.out.println(grafo.getVertice("v4").getGrau());
+			 * 
+			 * System.out.println("Vizinhos de V2"); for(Vertice v :
+			 * grafo.getAdjacentes("v2")) { System.out.print(v.getRotulo() + ", "); }
+			 * 
+			 * System.out.println("busca:");
+			 */
 			
-			System.out.println("Vizinhos de V2");
-			for(Vertice v : grafo.getAdjacentes("v2")) {
-				System.out.print(v.getRotulo() + ", ");
-			}
+			BuscaEmProfundidade buscaemprofundidade = new BuscaEmProfundidade(grafo);
+			
+			System.out.println(buscaemprofundidade.buscaCaminho("v1"));
 			
 		}catch(Exception e) {
 			System.out.println("Error ao criar o grafo.");
@@ -41,13 +47,15 @@ public class Principal {
 			System.exit(0);
 		}
 		
-		System.out.println("\n");
-		
-		grafo.getMatrizAdjacencia();
-		
-		System.out.println("ordem: " + grafo.getQrdem());
-		
-		System.out.println("tamanho: " + grafo.qtTamanho());
+		/*
+		 * System.out.println("\n");
+		 * 
+		 * grafo.getMatrizAdjacencia();
+		 * 
+		 * System.out.println("ordem: " + grafo.getQrdem());
+		 * 
+		 * System.out.println("tamanho: " + grafo.qtTamanho());
+		 */
 		
 	}
 
