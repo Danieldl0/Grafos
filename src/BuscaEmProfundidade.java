@@ -17,6 +17,7 @@ public class BuscaEmProfundidade {
 	}
 	
 	public List<Vertice> buscaCaminho(String rotuloVertice) throws Exception{
+		
 		List<Vertice> verticesVisitados = new ArrayList<Vertice>();
 		
 		Vertice origem = grafo.getVertice(rotuloVertice);

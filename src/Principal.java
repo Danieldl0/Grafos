@@ -41,6 +41,10 @@ public class Principal {
 			
 			System.out.println(buscaemprofundidade.buscaCaminho("v1"));
 			
+			BuscaEmProfundidadeRecursiva buscaEmProfundidadeRecursiva = new BuscaEmProfundidadeRecursiva(grafo);
+			buscaEmProfundidadeRecursiva.buscarCaminho("v1");
+			System.out.println(buscaEmProfundidadeRecursiva.getCaminho());
+			
 		}catch(Exception e) {
 			System.out.println("Error ao criar o grafo.");
 			System.out.println("Mensagem: " + e.getMessage());
